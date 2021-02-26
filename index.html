@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>card game</title>
+</head>
+<script>
+
+function validation(){
+let x = 0
+while(x<2){
+	let p1number = prompt("enter your user number player 1")
+	var p1details = players[p1number]
+	alert("welcome "+p1details.name)
+	let p1password = prompt("enter your password")
+	if(p1password == p1details.password){
+		console.log("hi")
+		x=2
+	}
+	else{
+		alert("password is incorrect")
+		x = 0
+
+	}
+}
+x = 0
+while(x<2){
+	let p2number = prompt("enter your user number player 2")
+	var p2details = players[p2number]
+	alert("welcome "+p2details.name)
+	let p2password = prompt("enter your password")
+	if(p2password == p2details.password){
+		console.log("hi")
+		x=2
+	}
+	else{
+		alert("password is incorrect")
+		x = 0
+
+	}
+}
+}
+
+
+var players = [
+	{
+		name: "alex",
+		password: "000",
+	},
+	{
+		name: "jim",
+		password: "111",
+	},
+	{
+		name: "admin",
+		password: "222",
+	},
+]
+</script>
+<body>
+
+<h1>welcome to my cardgame,</h1>
+<button onclick="document.location='play.html';validation()" ">login</button>
+
+
+
+</body>
+</html>
